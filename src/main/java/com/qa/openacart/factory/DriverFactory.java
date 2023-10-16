@@ -40,7 +40,8 @@ public class DriverFactory {
 
 			driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
-			driver.get("https://demo.opencart.com/index.php?route=account/login");
+			driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
+			//driver.get("https://demo.opencart.com/index.php?route=account/login");
 			return driver;
 	    
 	    

@@ -12,12 +12,20 @@ public class LoginPageTest extends BaseTest {
 	Assert.assertEquals(actualTitle,"Account Login");
 	}
 	
+	@Test
+	public void getLoginPageURLTest() {
+		String currentURL= loginPage.getLoginPageURL();
+		Assert.assertEquals(currentURL, "https://naveenautomationlabs.com/opencart/index.php?route=account/login");
+		}
+	
 	
 	@Test
 	public void loginTest() {
-		AccountsPage accPage =loginPage.doLogin("naveenanimation20@gmail.com", "Selenium@12345");
+		AccountsPage acctpage =loginPage.doLogin("anu7565@gmail.com", "Test@12345");
+		Assert.assertTrue(acctpage.logoutButtonIsDisplayed());
 		
-				}
+						}
 	
 	
-}
+	}
+

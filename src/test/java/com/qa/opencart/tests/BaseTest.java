@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
 
 import com.qa.openacart.factory.DriverFactory;
+import com.qa.opencart.pages.AccountsPage;
 import com.qa.opencart.pages.LoginPage;
 
 public class BaseTest {
@@ -11,6 +12,7 @@ public class BaseTest {
 	DriverFactory df;
 	public WebDriver myDriver;
 	protected LoginPage loginPage;
+	protected AccountsPage acctpage; 
 	
 	
 	@BeforeTest

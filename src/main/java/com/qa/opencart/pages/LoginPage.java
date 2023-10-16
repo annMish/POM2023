@@ -17,7 +17,7 @@ public class LoginPage {
 	private By email_address = By.id("input-email");
 	private By password = By.id("input-password");
 	private By forgotPasswordtext= By.linkText("Forgotten Password");
-	private By loginButton=By.xpath("//input[@class='btn btn-primary']");
+	private By loginButton=By.xpath("//input[@type= 'submit']");
 	
 	
 	public String getLoginPageTitle() {
@@ -26,13 +26,20 @@ public class LoginPage {
 		return title;
 	
 	}
-
+	public String getLoginPageURL() {
+		String url= driver.getCurrentUrl();
+		System.out.println(url);
+		return url;
+	}
+	
 	public AccountsPage doLogin(String username, String pwd) {
 		driver.findElement(email_address).sendKeys(username);
 		driver.findElement(password).sendKeys(pwd);
 		driver.findElement(loginButton).click();
 		return new AccountsPage(driver);
 	}
+	
+	
 	
 	
 }
