@@ -15,7 +15,7 @@ public class AccountsPage {
 	private By logoutButton=By.linkText("Logout");
 	private By rightHandpanelList= By.xpath("//div[@class='list-group']/a");
 	private By acctPageHeader= By.xpath("//div[@id='content']//h2");
-	
+	//WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(10));
 	
 	public  AccountsPage(WebDriver driver) {
 		this.driver=driver;
@@ -26,6 +26,9 @@ public class AccountsPage {
 		return title;
 	
 	}
+	
+	
+	
 	
 	public List<String> acctpageHeader() {
 		List<WebElement> acctheaderList= driver.findElements(acctPageHeader);

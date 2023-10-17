@@ -1,19 +1,15 @@
 package com.qa.opencart.tests;
 
-import java.util.Collection;
-import java.util.List;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.qa.opencart.pages.AccountsPage;
 import com.qa.opencart.utils.Constants;
 
 public class AccountsPageTest extends BaseTest {
 
 	
-	private static final Collection<?> Acct_Page_Header = null;
+	//private static final Collection<?> Acct_Page_Header = null;
 
 	@BeforeClass
 	public void accSetup() {
@@ -21,7 +17,6 @@ public class AccountsPageTest extends BaseTest {
 	}
 	
 	
-
 	
 	@Test
 	public void accPageTitleTest() {
@@ -35,7 +30,7 @@ public class AccountsPageTest extends BaseTest {
 		
 	@Test
 	public void logoutButtonIsDisplayedTest() {
-		Assert.assertTrue(acctpage.logoutButtonIsDisplayed());
+			Assert.assertTrue(acctpage.logoutButtonIsDisplayed());
 	}
 		
 	@Test
