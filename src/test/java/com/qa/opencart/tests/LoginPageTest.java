@@ -1,5 +1,6 @@
 package com.qa.opencart.tests;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.qa.opencart.pages.AccountsPage;
@@ -22,9 +23,10 @@ public class LoginPageTest extends BaseTest {
 	@Test
 	public void loginTest() {
 		AccountsPage acctpage =loginPage.doLogin("anu7565@gmail.com", "Test@12345");
-		Assert.assertTrue(acctpage.logoutButtonIsDisplayed());
+		wait.until(ExpectedConditions.visibilityOf(acctpage.logoutButtonIsDisplayed()));
+		//Assert.assertTrue(acctpage.logoutButtonIsDisplayed());
 		
-						}
+	}
 	
 	
 	}
