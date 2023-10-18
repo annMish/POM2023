@@ -3,11 +3,14 @@ package com.qa.opencart.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.qa.opencart.utils.ElementUtil;
+
 
 
 public class LoginPage {
 	
 	public WebDriver driver;
+	public ElementUtil eleutil;
 	
 	public LoginPage(WebDriver driver) {
 	   this.driver=driver;
@@ -39,6 +42,13 @@ public class LoginPage {
 		return new AccountsPage(driver);
 	}
 	
+	
+	public AccountsPage doLoginwithEleUtil(String value) {
+		eleutil.waitForElementVisible(email_address, 5).sendKeys(value);
+		eleutil.waitForElementVisible(password, 1).sendKeys(value);
+		eleutil.waitForElementVisible(loginButton, 3).click();
+		return new AccountsPage(driver);
+	}
 	
 	
 	

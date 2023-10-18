@@ -17,7 +17,7 @@ public class BaseTest {
 	public WebDriver myDriver;
 	protected LoginPage loginPage;
 	protected AccountsPage acctpage; 
-	//protected ElementUtil eleutil;
+	public ElementUtil eleutil;
 	
 	@BeforeTest
 	public void Setup() {
@@ -25,7 +25,7 @@ public class BaseTest {
 		df= new DriverFactory();
 		myDriver = df.init_driver("Chrome");
 	   	loginPage= new LoginPage(myDriver);
-	   	//eleutil=new ElementUtil(myDriver);
+	   	eleutil=new ElementUtil(myDriver);
 	   	
 	}
 		

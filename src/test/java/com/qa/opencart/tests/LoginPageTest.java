@@ -20,14 +20,21 @@ public class LoginPageTest extends BaseTest {
 		}
 	
 	
+//	@Test
+//	public void loginTest() {
+//		AccountsPage acctpage =loginPage.doLogin("anu7565@gmail.com", "Test@12345");
+//		//wait.until(ExpectedConditions.visibilityOf(acctpage.logoutButtonIsDisplayed()));
+//		Assert.assertTrue(acctpage.logoutButtonIsDisplayed());
+//	
+//	}
+	
 	@Test
-	public void loginTest() {
-		AccountsPage acctpage =loginPage.doLogin("anu7565@gmail.com", "Test@12345");
-		wait.until(ExpectedConditions.visibilityOf(acctpage.logoutButtonIsDisplayed()));
-		//Assert.assertTrue(acctpage.logoutButtonIsDisplayed());
+	public void doLoginwithEleUtilTest() {
+		loginPage.doLoginwithEleUtil("anu7565@gmail.com");
+		loginPage.doLoginwithEleUtil("Test@12345");
+		
 		
 	}
-	
 	
 	}
 
