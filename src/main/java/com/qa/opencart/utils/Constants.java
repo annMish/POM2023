@@ -13,4 +13,8 @@ public class Constants {
 	//Wrong public static final String[] Acct_Page_Header= {"My Account","My Orders","My Affiliate Account"};
 	
 	public static final List<String> ACCOUNTS_PAGE_SECTIONS_HEADER_LIST = Arrays.asList("My Account","My Orders","My Affiliate Account","Newsletter");
+
+    public static final String Logout_Page_Title= "Account Logout";
+
 }
+

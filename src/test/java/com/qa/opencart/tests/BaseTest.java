@@ -8,7 +8,9 @@ import org.testng.annotations.BeforeTest;
 
 import com.qa.openacart.factory.DriverFactory;
 import com.qa.opencart.pages.AccountsPage;
+import com.qa.opencart.pages.CommanPage;
 import com.qa.opencart.pages.LoginPage;
+import com.qa.opencart.pages.SearchResultsPage;
 import com.qa.opencart.utils.ElementUtil;
 
 public class BaseTest {
@@ -17,6 +19,8 @@ public class BaseTest {
 	public WebDriver myDriver;
 	protected LoginPage loginPage;
 	protected AccountsPage acctpage; 
+	protected CommanPage commanpage;
+	protected SearchResultsPage searchrespage;
 	public ElementUtil eleutil;
 	
 	@BeforeTest
@@ -25,6 +29,8 @@ public class BaseTest {
 		df= new DriverFactory();
 		myDriver = df.init_driver("Chrome");
 	   	loginPage= new LoginPage(myDriver);
+	   	commanpage=new CommanPage(myDriver);
+	   	searchrespage=new SearchResultsPage(myDriver);
 	   	eleutil=new ElementUtil(myDriver);
 	   	
 	}

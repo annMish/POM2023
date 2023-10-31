@@ -39,8 +39,16 @@ public class AccountsPageTest extends BaseTest {
 		
 	}
 	
-	}
-	
-	
+//	@Test
+//	public void doLogoutTest() {
+//		acctpage.doLogout();
+//		
+//	}
+//	@Test
+//	public  void dogetLogoutPageTitle() {
+//		Assert.assertEquals(acctpage.accPageTitle(), Constants.Logout_Page_Title);
+//	
+//	}
+}
 	
 
