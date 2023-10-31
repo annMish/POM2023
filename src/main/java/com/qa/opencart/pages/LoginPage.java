@@ -2,18 +2,20 @@ package com.qa.opencart.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
+import com.qa.opencart.utils.Constants;
 import com.qa.opencart.utils.ElementUtil;
 
 
 
 public class LoginPage {
 	
-	public WebDriver driver;
+	public WebDriver myDriver;
 	public ElementUtil eleutil;
 	
-	public LoginPage(WebDriver driver) {
-	   this.driver=driver;
+	public LoginPage(WebDriver myDriver) {
+	   this.myDriver=myDriver;
 	 }
 	
 	 		
@@ -24,31 +26,31 @@ public class LoginPage {
 	
 	
 	public String getLoginPageTitle() {
-		String title= driver.getTitle();
+		String title= myDriver.getTitle();
 		System.out.println(title);
 		return title;
 	
 	}
 	public String getLoginPageURL() {
-		String url= driver.getCurrentUrl();
+		String url= myDriver.getCurrentUrl();
 		System.out.println(url);
 		return url;
 	}
 	
 	public AccountsPage doLogin(String username, String pwd) {
-		driver.findElement(email_address).sendKeys(username);
-		driver.findElement(password).sendKeys(pwd);
-		driver.findElement(loginButton).click();
-		return new AccountsPage(driver);
+		myDriver.findElement(email_address).sendKeys(username);
+		myDriver.findElement(password).sendKeys(pwd);
+		myDriver.findElement(loginButton).click();
+		return new AccountsPage(myDriver);
 	}
 	
 	
-	public AccountsPage doLoginwithEleUtil(String value) {
-		eleutil.waitForElementVisible(email_address, 5).sendKeys(value);
-		eleutil.waitForElementVisible(password, 1).sendKeys(value);
-		eleutil.waitForElementVisible(loginButton, 3).click();
-		return new AccountsPage(driver);
-	}
+//	public AccountsPage doLoginwithEleUtil(String value) {
+//		eleutil.waitForElementVisible(email_address, 5).sendKeys(value);
+//		eleutil.waitForElementVisible(password, 1).sendKeys(value);
+//		eleutil.waitForElementVisible(loginButton, 3).click();
+//		return new AccountsPage(driver);
+//	}
 	
 	
 	
